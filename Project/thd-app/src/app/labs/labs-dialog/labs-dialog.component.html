@@ -1,0 +1,43 @@
+<!-- Read Lab -->
+<div *ngIf="readOnly">
+  <h1 mat-dialog-title>{{ title }}</h1>
+  <div mat-dialog-content>
+    <p>{{ content }}</p>
+  </div>
+  <div mat-dialog-actions align="center">
+    <button mat-raised-button color="primary" (click)="closeDialog()">{{ 'labs.close' | translate }}</button>
+  </div>
+</div>
+<!-- Create Lab -->
+<div *ngIf="!readOnly" class="create-div">  
+  <form [formGroup]="labForm">
+    <!--Name-->
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'labs.create.title' | translate }}</mat-label>
+      <input matInput formControlName="name" required>
+    </mat-form-field>
+    <!-- Category -->
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'labs.create.category' | translate }}</mat-label>
+      <mat-select #categorySelect formControlName="category">
+        <mat-option *ngFor="let category of categories" [value]="category.value">
+            {{ category.label }}
+        </mat-option>
+    </mat-select>
+    </mat-form-field>
+    <!-- Location -->
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'labs.create.location' | translate }}</mat-label>
+      <input matInput formControlName="location" required>
+    </mat-form-field>
+    <!--Description-->
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'labs.create.description' | translate }}</mat-label>
+      <textarea matInput formControlName="description" required></textarea>
+    </mat-form-field>
+    <!--Create Button-->
+    <button mat-raised-button color="primary" (click)="create()" [disabled]="labForm.invalid">
+      {{ 'labs.create.create_button' | translate }}
+    </button>
+  </form>
+</div>

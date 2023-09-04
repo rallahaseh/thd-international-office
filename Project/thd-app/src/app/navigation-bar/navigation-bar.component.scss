@@ -1,0 +1,38 @@
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+  box-shadow: 3px 0 6px rgba(47, 47, 47, 0.25);
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  background-color: rgba(47, 47, 47, 0.8);
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.img-border {
+  margin: 10px;
+  overflow: auto;
+  object-fit: fill;
+  transform: scale(0.8);
+  height: auto;
+  width: 30%;    
+  .img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block; /* remove extra space below image */
+  }
+}

@@ -1,0 +1,72 @@
+<div class="main-div">
+    <mat-card>
+        <form [formGroup]="registrationForm">
+            <!--First Name-->
+            <mat-form-field appearance="fill">
+                <mat-label>{{ 'register.first_name' | translate }}</mat-label>
+                <input matInput formControlName="firstName" required required>
+            </mat-form-field>
+            <!--Last Name-->
+            <mat-form-field appearance="fill">
+                <mat-label>{{ 'register.last_name' | translate }}</mat-label>
+                <input matInput formControlName="lastName" required>
+            </mat-form-field>
+            <!--Age-->
+            <mat-form-field appearance="fill">
+                <mat-label>{{ 'register.dob' | translate }}</mat-label>
+                <input matInput formControlName="dob" [max]="maxDate" [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <!--Email-->
+            <mat-form-field appearance="fill">
+                <mat-label>{{ 'register.email' | translate }}</mat-label>
+                <input matInput formControlName="email">
+                <mat-error *ngIf="registrationForm.controls['email'].errors?.email">{{ 'email.format' | translate }}
+                </mat-error>
+            </mat-form-field>
+            <!--Role-->
+            <mat-radio-group formControlName="role">
+                <mat-label>{{ 'register.select_role' | translate }}</mat-label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <mat-radio-button [checked]="true" value="student">{{ 'register.student' | translate }}
+                </mat-radio-button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <mat-radio-button value="instructor">{{ 'register.instructor' | translate }}</mat-radio-button>
+            </mat-radio-group>
+            <!--Username-->
+            <mat-form-field appearance="fill">
+                <mat-label>{{ 'register.username' | translate }}</mat-label>
+                <input matInput formControlName="username" required>
+                <mat-error *ngIf="registrationForm.controls['username'].errors?.minlength">{{ 'validators.min_length' |
+                    translate
+                    }}</mat-error>
+                <mat-error *ngIf="registrationForm.controls['username'].errors?.maxlength">{{ 'validators.length_20' |
+                    translate }}
+                </mat-error>
+            </mat-form-field>
+            <!--Password-->
+            <mat-form-field appearance="fill">
+                <mat-label>{{ 'register.password' | translate }}</mat-label>
+                <input matInput [type]="isPasswordFieldHidden ? 'password' : 'text'" formControlName="password"
+                    required>
+                <button mat-icon-button matSuffix (click)="isPasswordFieldHidden = !isPasswordFieldHidden"
+                    [attr.aria-pressed]="isPasswordFieldHidden">
+                    <mat-icon>{{ isPasswordFieldHidden ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+                <mat-error *ngIf="registrationForm.controls['password'].errors?.minlength">{{ 'validators.min_length' |
+                    translate
+                    }}</mat-error>
+                <mat-error *ngIf="registrationForm.controls['password'].errors?.maxlength">{{ 'validators.length_40' |
+                    translate }}
+                </mat-error>
+            </mat-form-field>
+            <!--Register Button-->
+            <button mat-raised-button color="primary" (click)="register()" [disabled]="registrationForm.invalid">
+                {{ 'register.signup_button' | translate }}
+            </button>
+            <!--Route to Login-->
+            <br><a href="/login">{{ 'register.route_to_login_page' | translate }}</a><br />
+        </form>
+    </mat-card>
+</div>

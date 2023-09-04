@@ -1,0 +1,17 @@
+mat-toolbar, mat-card {
+    max-width: 75%;
+    margin: 25px;
+    object-fit: fill;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+mat-form-field, textarea {
+    width: 100%;
+}

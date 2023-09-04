@@ -1,0 +1,101 @@
+<mat-sidenav-container fxFlexFill>
+  <!-- The following menu items will be hidden on both M and XL screen sizes -->
+  <mat-sidenav #sidenav fullscreen>
+    <mat-toolbar> {{ 'side_menu.menu' | translate }} </mat-toolbar>
+    <mat-nav-list>
+      <!-- Users -->
+      <a mat-list-item *ngIf="authService.isLoggedIn()&&authService.isAdmin()" (click)="sidenav.toggle()" routerLink="/users">{{ 'side_menu.users' | translate }}</a>
+      <!-- Home -->
+      <a mat-list-item (click)="sidenav.toggle()" routerLink="/">{{ 'side_menu.home' | translate }}</a>
+      <!-- News -->
+      <a mat-list-item (click)="sidenav.toggle()" routerLink="/news">{{ 'side_menu.news' | translate }}</a>
+      <!-- Labs -->
+      <a mat-list-item (click)="sidenav.toggle()" routerLink="/labs">{{ 'side_menu.labs' | translate }}</a>
+      <mat-list>
+        <!-- Students Section -->
+        <div mat-subheader>{{ 'side_menu.students.title' | translate }}</div>
+        <mat-list-item>
+          <div mat-line>
+            <!-- Apply -->
+            <a mat-list-item (click)="sidenav.toggle()" routerLink="/students/apply">{{ 'side_menu.students.apply' |
+              translate }}</a>
+          </div>
+          <div mat-line>
+            <!-- International Students -->
+            <a mat-list-item (click)="sidenav.toggle()" routerLink="/students/international">{{
+              'side_menu.students.international' | translate }}</a>
+          </div>
+        </mat-list-item>
+        <!-- Chat -->
+        <a mat-list-item *ngIf="!authService.isLoggedIn()&&authService.isStudent()" (click)="sidenav.toggle()" routerLink="/chat">{{ 'side_menu.chat' | translate }}</a>
+        <!-- Login -->
+        <a mat-list-item *ngIf="!authService.isLoggedIn()" (click)="sidenav.toggle()" routerLink="/login">{{ 'side_menu.login' | translate }}</a>
+        <!-- Logout -->
+        <a mat-list-item *ngIf="authService.isLoggedIn()" (click)="sidenav.toggle();authService.logout();">{{ 'side_menu.logout' | translate }}</a>
+      </mat-list>
+    </mat-nav-list>
+  </mat-sidenav>
+  <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+  <mat-sidenav-content>
+    <mat-toolbar fxLayout="row" color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="false" fxShow.lt-sm>
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="img-border"><a href="#"><img class="img" src="/assets/logo/THD.png"></a></div>
+      <span class="spacer"></span>
+      <div fxShow="true" fxHide.lt-sm>
+        <!-- Users -->
+        <button *ngIf="authService.isLoggedIn()&&authService.isAdmin()" mat-button routerLink="/users">
+          <mat-icon class="mr">supervised_user_circle</mat-icon>
+          {{ 'navigation_bar.users' | translate }}
+        </button>
+        <!-- Home -->
+        <button mat-button routerLink="/">
+          <mat-icon class="mr">home</mat-icon>
+          {{ 'navigation_bar.home' | translate }}
+        </button>
+        <!-- News -->
+        <button mat-button routerLink="/news">
+          <mat-icon class="mr">description</mat-icon>
+          {{ 'navigation_bar.news' | translate }}
+        </button>
+        <!-- Labs -->
+        <button mat-button routerLink="/labs">
+          <mat-icon class="mr">architecture</mat-icon>
+          {{ 'navigation_bar.labs' | translate }}
+        </button>
+        <!-- Students Section -->
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon class="mr">school</mat-icon>
+          {{ 'navigation_bar.students.title' | translate }}
+        </button>
+        <mat-menu #menu="matMenu">
+          <!-- Apply -->
+          <button mat-menu-item routerLink="/students/apply">
+            {{ 'navigation_bar.students.apply' | translate }}
+          </button>
+          <!-- International Students -->
+          <button mat-menu-item routerLink="/students/international">
+            {{ 'navigation_bar.students.international' | translate }}
+          </button>
+        </mat-menu>
+        <!-- Chat -->
+        <button *ngIf="authService.isLoggedIn()&&authService.isStudent()" mat-button routerLink="/chat">
+          <mat-icon class="mr">chat</mat-icon>
+          {{ 'navigation_bar.chat' | translate }}
+        </button>
+        <!-- Login -->
+        <button *ngIf="!authService.isLoggedIn()" mat-button routerLink="/login">
+          <mat-icon class="mr">login</mat-icon>
+          {{ 'navigation_bar.login' | translate }}
+        </button>
+        <!-- Logout -->
+        <button *ngIf="authService.isLoggedIn()" (click)="authService.logout()" mat-button>
+          <mat-icon class="mr">login</mat-icon>
+          {{ 'navigation_bar.logout' | translate }}
+        </button>
+      </div>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

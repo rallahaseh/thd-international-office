@@ -1,0 +1,26 @@
+mat-drawer-container { 
+    min-height: 265px;
+    margin: 10px;
+    border: 1px solid #555;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.users {
+    height: auto;
+    width: 25%;
+}
+.chat {
+    height: auto;
+    width: 100%;
+}
+
+.chat-functionality-form {
+    margin: 10px;
+    width: 80%;
+}
+  
+.chat-functionality-field {
+    margin: 10px;
+    width: 80%;
+}

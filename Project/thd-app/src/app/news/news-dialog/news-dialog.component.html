@@ -1,0 +1,82 @@
+<!-- Read Article -->
+<div *ngIf="type===allTypes.read">
+  <h1 mat-dialog-title>{{ title }}</h1>
+  <div mat-dialog-content>
+    <p>{{ content }}</p>
+  </div>
+  <div mat-dialog-actions align="center">
+    <button mat-raised-button color="primary" (click)="closeDialog()">{{ 'news.close' | translate }}</button>
+  </div>
+</div>
+<!-- Create Article -->
+<div *ngIf="type===allTypes.create" class="create-div">
+  <form [formGroup]="articleForm">
+    <!--Title-->
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.title' | translate }} "English"</mat-label>
+      <input matInput formControlName="title_en" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.title' | translate }} "Deutsch"</mat-label>
+      <input matInput formControlName="title_de" required>
+    </mat-form-field>
+    <!--Sub title-->
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.subtitle' | translate }} "English"</mat-label>
+      <input matInput formControlName="sub_title_en">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.subtitle' | translate }} "Deutsch"</mat-label>
+      <input matInput formControlName="sub_title_de">
+    </mat-form-field>
+    <!--Content-->
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.content' | translate }} "English"</mat-label>
+      <textarea matInput formControlName="content_en" required></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.content' | translate }} "Deutsch"</mat-label>
+      <textarea matInput formControlName="content_de" required></textarea>
+    </mat-form-field>
+    <!--Create Button-->
+    <button mat-raised-button color="primary" (click)="create()" [disabled]="articleForm.invalid">
+      {{ 'news.create.create_button' | translate }}
+    </button>
+  </form>
+</div>
+<!-- Update Article -->
+<div *ngIf="type===allTypes.update" class="create-div">
+  <form [formGroup]="articleForm">
+    <!--Title-->
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.title' | translate }} "English"</mat-label>
+      <input matInput formControlName="title_en" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.title' | translate }} "Deutsch"</mat-label>
+      <input matInput formControlName="title_de" required>
+    </mat-form-field>
+    <!--Sub title-->
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.subtitle' | translate }} "English"</mat-label>
+      <input matInput formControlName="sub_title_en">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.subtitle' | translate }} "Deutsch"</mat-label>
+      <input matInput formControlName="sub_title_de">
+    </mat-form-field>
+    <!--Content-->
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.content' | translate }} "English"</mat-label>
+      <textarea matInput formControlName="content_en" required></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'news.create.content' | translate }} "Deutsch"</mat-label>
+      <textarea matInput formControlName="content_de" required></textarea>
+    </mat-form-field>
+    <!--Update Button-->
+    <button mat-raised-button color="primary" (click)="update()" [disabled]="articleForm.invalid">
+      {{ 'news.create.update_button' | translate }}
+    </button>
+  </form>
+</div>

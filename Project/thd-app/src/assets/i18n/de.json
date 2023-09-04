@@ -1,0 +1,222 @@
+{
+    "language": "Sprache",
+    "cancel": "Abbrechen",
+    "side_menu": {
+        "menu": "Menü",
+        "users": "Benutzer",
+        "home": "Heim",
+        "news": "Nachrichten",
+        "labs": "Labore",
+        "students": {
+            "title": "Studenten",
+            "apply": "Was soll ich studieren?",
+            "international": "International"
+        },
+        "chat": "Plaudern",
+        "login": "Anmelden",
+        "logout": "Ausloggen"
+    },
+    "navigation_bar": {
+        "home": "Heim",
+        "users": "Benutzer",
+        "news": "Nachrichten",
+        "labs": "Labore",
+        "students": {
+            "title": "Studenten",
+            "apply": "Was soll ich studieren?",
+            "international": "International"
+        },
+        "chat": "Plaudern",
+        "login": "Anmelden",
+        "logout": "Ausloggen"
+    },
+    "footer": {
+        "content": "© 2022 | Technische Hochschule Deggendorf | von: Rashed Al-Lahaseh"
+    },
+    "users": {
+        "role": "Rolle",
+        "name": "Vollständiger Name",
+        "username": "Benutzername",
+        "email": "E-mail",
+        "dob": "Geburtsdatum"
+    },
+    "home": {
+        "image_container": {
+            "body_sm": "Spitzenergebnis für die THD im WURI-Ranking",
+            "body_lg": "Spitzenergebnis für die THD im WURI-Ranking\nWeltweit Platz 5 in \"Entrepreneurial Spirit\", Platz 7 in \"Crisis management\"",
+            "button_title": "Mehr erfahren",
+            "link": "https://th-deg.de/de/Presseartikel?id=325119"
+        },
+        "info": {
+            "header": "Studieren & Forschen an der THD",
+            "body": "Innovativ und lebendig. Entdecke deine Hochschule"
+        },
+        "cards": {
+            "title": "Seiten",
+            "news": {
+                "title": "Nachrichten",
+                "description": "Überprüfen Sie die neuesten Nachrichten",
+                "router_link_description": "Seite besuchen"
+            },
+            "labs": {
+                "title": "Labore",
+                "description": "Sie suchen Ihr Vorlesungslabor?",
+                "router_link_description": "Seite besuchen"
+            },
+            "students": {
+                "title": "Neuer Student? möchten sich bewerben?",
+                "description": "Weitere Informationen finden Sie auf der Seite",
+                "router_link_description": "Seite besuchen"
+            }
+        }
+    },
+    "register": {
+        "cards": {
+            "admin": {
+                "title": "Admin-Registrierung",
+                "description": "Registrieren Sie sich als Administrator",
+                "router_link_description": "Jetzt registrieren!"
+            },
+            "user": {
+                "title": "Benutzer Registration",
+                "description": "Melden Sie sich jetzt als Student oder Dozent an",
+                "router_link_description": "Jetzt registrieren!"
+            }
+        },
+        "first_name": "Vorname",
+        "last_name": "Nachname",
+        "dob": "Geburtsdatum",
+        "email": "E-mail",
+        "select_role": "Rolle Auswählen",
+        "student": "Student",
+        "instructor": "Lehrer",
+        "username": "Benutzername",
+        "password": "Passwort",
+        "signup_button": "Registrieren",
+        "route_to_login_page": "Hast du einen Account? Jetzt einloggen"
+    },
+    "login": {
+        "username": "Benutzername",
+        "password": "Passwort",
+        "signin_button": "Anmeldung",
+        "route_to_register_page": "Haben Sie kein Konto? Jetzt registrieren"
+    },
+    "news": {
+        "search_bar": "Artikel suchen",
+        "open_dialog": "Artikel öffnen",
+        "close": "schließen",
+        "create": {
+            "title": "Titel hinzufügen",
+            "subtitle": "Untertitel hinzufügen",
+            "content": "Inhalt hinzufügen",
+            "create_button": "Artikel hinzufügen",
+            "update_button": "Artikel aktualisieren"
+        }
+    },
+    "labs": {
+        "search_bar": "Suche ...",
+        "category": "Kategorie",
+        "open_dialog": "Zeige Details",
+        "close": "Nah dran",
+        "reserve": {
+            "reserve_question": "Möchten Sie ein Labor reservieren",
+            "instructor": "Geben Sie den Namen des Laborlehrers ein",
+            "reserve_button": "Reservieren"
+        },
+        "create": {
+            "title": "Labornamen eingeben",
+            "description": "Laborbeschreibung eingeben",
+            "category": "Laborkategorie auswählen",
+            "instructor": "Geben Sie den Namen des Laborlehrers ein",
+            "location": "Laborstandort eingeben",
+            "create_button": "Labor hinzufügen"
+        },
+        "categories": {
+            "gesundheitswissenschaften": "Angewandte Gesundheitswissenschaften",
+            "informatik": "Angewandte Informatik",
+            "elektrotechnik_medientechnik": "Elektrotechnik und Medientechnik"
+        }
+    },
+    "students": {
+        "apply": {
+            "image_container": {
+                "header": "Bewirb dich für dein Wunschstudium",
+                "body": "an Bayerns internationalster Hochschule"
+            },
+            "intro": {
+                "title": "Bewerbung",
+                "body": "So bewirbst du dich erfolgreich für dein Wunschstudium"
+            },
+            "content": {
+                "title": "Sprachvoraussetzungen",
+                "thd_button": "Sprachvoraussetzungen für ein Studium an der THD",
+                "thd_link": "https://www.th-deg.de/Studieninteressierte/Bewerbung/language_requirements_German-English_DEG.pdf",
+                "european_button": "Sprachvoraussetzungen für ein Studium am European Campus Rottal-Inn",
+                "european_link": "https://www.th-deg.de/Studieninteressierte/Bewerbung/language_requirements_German-English_ECRI.pdf"
+            },
+            "application": {
+                "title": "Bewerbungsfristen",
+                "period_button": "BEWERBUNGSZEITRAUM IM ÜBERBLICK",
+                "period_link": "https://www.th-deg.de/Studieninteressierte/Bewerbung/application-timeline-d.pdf",
+                "application_option_1": "Generell gelten folgende Bewerbungsfristen für Bewerber:innen eines Vollstudiums:",
+                "application_option_1_sub_1": "Wintersemester: 15. April - 15. Juli",
+                "application_option_1_sub_2": "Sommersemester: 15. November - 15. Januar",
+                "application_option_2": "Abweichende Bewerbungfristen:",
+                "application_option_2_sub_1": "Master Applied Research in Engineering Sciences vom 15. April - 31. Mai für den Studienstart im Oktober sowie vom 15. November - 15. Dezember für den Studienstart im März",
+                "application_option_2_sub_2": "Master Global Public Health vom 15. April - 15. Juni für den Studienstart im Oktober",
+                "application_option_3": "Generell gelten folgende Bewerbungsfristen für Bewerber eines berufsbegleitenden Studiums:",
+                "application_option_3_sub_1": "Start im Wintersemester: Bewerbung bis 15. Juli",
+                "application_option_3_sub_2": "Start im Sommersemester: Bewerbung bis 15. Januar",
+                "requirement_title": "Erforderliche Dokumente",
+                "requirement_sub_title": "Bewerben Sie sich direkt bei der DIT-Online-Bewerbungsplattform (Primuss) und folgen Sie den angegebenen Schritten. Erforderliche Unterlagen für die Bewerbung:",
+                "requirement_1": "Abiturzeugnis",
+                "requirement_2": "Abschlusszeugnis des Bachelors und Transcripts of Records",
+                "requirement_3": "Lebenslauf und Foto",
+                "requirement_4": "Sprachzertifikate",
+                "requirement_5": "Reisepass"
+            }
+        },
+        "international": {
+            "image_container": {
+                "header": "Bewirb dich für dein Wunschstudium",
+                "body": "an Bayerns internationalster Hochschule"
+            },
+            "intro": {
+                "title": "Warum an der THD studieren?",
+                "body": "Gute Gründe für ein Studium an der THD"
+            },
+            "reasons_title": "Noch mehr gute Gründe, sich für ein Studium an der THD zu entscheiden",
+            "reasons": {
+                "first_reason_title": "ENGLISCHE STUDIENGÄNGE",
+                "first_reason_content": "Wir sind die einzige Hochschule mit einem internationalen Campus mit ausschließlich englischsprachigen Studiengängen: unser European Campus Rottal-Inn",
+                "second_reason_title": "LAGE",
+                "second_reason_content": "Unsere Campus in Deggendorf und Pfarrkirchen sind stadtnah und verfügen über eine gute Zug- sowie Autobahnanbindung",
+                "third_reason_title": "EVENTS",
+                "third_reason_content": "Immer was geboten: Von der eigenen TV-Show über International Week bis zum Campus Open Air Festival",
+                "fourth_reason_title": "MIETE",
+                "fourth_reason_content": "Günstige Mieten und Lebenshaltungskosten im Vergleich zu anderen Hochschulstädten; großes Angebot an Studentenwohnheimen",
+                "fifth_reason_title": "INTERNATIONALITÄT",
+                "fifth_reason_content": "Die THD ist familiär & multikulturell - bei uns studieren über 8000 Studierende aus mehr als 100 Nationen",
+                "sixth_reason_title": "BETREUUNG",
+                "sixth_reason_content": "Ob Wohnungssuche, BAföG oder Auslandsstudium: bei uns wird dir stets persönlich geholfen",
+                "seventh_reason_title": "RANKINGS",
+                "seventh_reason_content": "Wir sind (international) ausgezeichnet: In zahlreichen Rankings sind wir vorne dabei",
+                "eighth_reason_title": "SPORT",
+                "eighth_reason_content": "Vielfältiges Hochschulsportangebot von Rudern über Yoga bis zu Volleyball",
+                "ninth_reason_title": "BERUFLICH DURCHSTARTEN",
+                "ninth_reason_content": "87 % aller THD-Absolventen finden innerhalb von 2 Monaten einen Job"
+            }
+        }
+    },
+    "chat": {
+        "message": "Message",
+        "send_message": "Send",
+        "users": "Users"
+    },
+    "validators": {
+        "mandatory_field": "Das Feld ist obligatorisch.",
+        "min_length": "Die Länge sollte mindestens 6 Zeichen betragen.",
+        "max_length_20": "Die Länge sollte maximal 20 Zeichen betragen.",
+        "max_length_40": "Die Länge sollte maximal 40 Zeichen betragen."
+    }
+}

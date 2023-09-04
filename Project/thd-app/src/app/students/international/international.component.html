@@ -1,0 +1,35 @@
+<!-- Header Section -->
+<div class="header">
+    <div class="image-container">
+        <img src="/assets/background/international.jpeg" alt="THD Campus" style="width:100%;">
+        <div class="image-content">
+            <h1>{{ 'students.international.image_container.header' | translate }}</h1>
+            <h2>{{ 'students.international.image_container.body' | translate }}</h2>
+        </div>
+    </div>
+</div>
+<!-- Body Section -->
+<div class="content">
+    <h1>{{ 'students.international.intro.title' | translate }}</h1>
+    <h1>{{ 'students.international.intro.body' | translate }}</h1>
+    <iframe class="video-frame" [src]='safeURL' frameborder="0" allowfullscreen></iframe>
+</div>
+<mat-divider></mat-divider>
+<div class="content">
+    <h1>{{ 'students.international.reasons_title' | translate }}</h1>
+    <mat-grid-list cols="2" rowHeight="4:1">
+        <!-- List of reasons -->
+        <mat-grid-tile *ngFor="let reason of reasons" [style.background]="reason.color">
+            <div fxLayout="row wrap" fxLayoutGap="16px">
+                <p class="paragraph">
+                    <mat-icon>{{ reason.icon }}</mat-icon>
+                    <br>
+                    {{ reason.title | translate }}
+                    <br>
+                    {{ reason.description | translate }}
+                </p>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<br>

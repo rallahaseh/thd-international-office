@@ -1,0 +1,12 @@
+<form [formGroup]="labForm">
+    <h3>{{ 'labs.reserve.reserve_question' | translate }} {{ lab.name }}?</h3>
+    <!-- Instructor -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'labs.reserve.instructor' | translate }}</mat-label>
+        <input matInput formControlName="instructor" required>
+    </mat-form-field>
+    <!--Reserve Button-->
+    <button mat-raised-button color="primary" (click)="reserve()" [disabled]="labForm.invalid">
+        {{ 'labs.reserve.reserve_button' | translate }}
+    </button>
+</form>

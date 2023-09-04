@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <!-- Animated title -->
+        <span fxHide fxShow.gt-sm class="title" id="word-carousel" [@fadeAnimation]="toogle" (@fadeAnimation.done)="nextWord($event)">{{wordCarousel[wordCounter]}}</span>
+        <span class="spacer"></span>
+        <!-- Language field -->
+        <mat-form-field #langFormField appearance="fill">
+            <mat-label>{{ 'language' | translate }}</mat-label>
+            <!-- Language selector -->
+            <mat-select #langSelect [(value)]="currentLanguage" (selectionChange)="changeTo($event.value)">
+                <!-- Language option -->
+                <mat-option *ngFor="let language of languages" [value]="language.value" [attr.selected]='currentLanguage'>
+                    {{ language.name }}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </mat-toolbar-row>
+</mat-toolbar>

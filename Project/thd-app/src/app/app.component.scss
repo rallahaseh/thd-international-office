@@ -1,0 +1,39 @@
+.main {
+    margin: 10px;
+}
+
+.flexSpaceBetween {
+  justify-content: space-around;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logobox {
+  position: absolute;
+  top: 15px !important;
+  margin-top: 5px !important; 
+}
+
+.sn-content {
+  height: 100vh;
+}
+
+.footer {
+  background-color: rgba(47, 47, 47, 0.8);
+  height: auto;
+  width: auto;
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+}

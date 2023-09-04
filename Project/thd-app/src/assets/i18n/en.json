@@ -1,0 +1,221 @@
+{
+    "language": "Language",
+    "cancel": "Cancel",
+    "side_menu": {
+        "menu": "Menu",
+        "users": "Users",
+        "home": "Home",
+        "news": "News",
+        "labs": "Labs",
+        "students": {
+            "title": "Students",
+            "apply": "How to apply?",
+            "international": "International"
+        },
+        "chat": "Chat",
+        "login": "Sign in",
+        "logout": "Sign out"
+    },
+    "navigation_bar": {
+        "home": "Home",
+        "users": "Users",
+        "news": "News",
+        "labs": "Labs",
+        "students": {
+            "title": "Students",
+            "apply": "How to apply?",
+            "international": "International"
+        },
+        "chat": "Chat",
+        "login": "Sign in",
+        "logout": "Sign out"
+    },
+    "footer": {
+        "content": "© 2022 | Deggendorf Institute of Technology | by: Rashed Al-Lahaseh"
+    },
+    "users": {
+        "role": "Role",
+        "name": "Full Name",
+        "username": "Username",
+        "email": "E-mail",
+        "dob": "Date of birth"
+    },
+    "home": {
+        "image_container": {
+            "body_sm": "Top Results for DIT in WURI Ranking",
+            "body_lg": "Top Results for DIT in WURI Ranking\nranked worldwide No.5 for Entrepreneurial Spirit & No.7 for Crisis management",
+            "button_title": "Find out more",
+            "link": "https://th-deg.de/en/Presseartikel?id=325119"
+        },
+        "info": {
+            "header": "Study & Research at DIT",
+            "body": "Discover our Pioneering and Vibrant University"
+        },
+        "cards": {
+            "title": "Pages",
+            "news": {
+                "title": "News",
+                "description": "Check latest news",
+                "router_link_description": "Visit Page"
+            },
+            "labs": {
+                "title": "Labs",
+                "description": "Looking for your lecture lab?",
+                "router_link_description": "Visit Page"
+            },
+            "students": {
+                "title": "New student? Want to apply?",
+                "description": "Check out the page for more details",
+                "router_link_description": "Visit Page"
+            }
+        }
+    },
+    "register": {
+        "cards": {
+            "admin": {
+                "title": "Admin Registration",
+                "description": "Register as an admin",
+                "router_link_description": "Register Now!"
+            },
+            "user": {
+                "title": "User Registration",
+                "description": "Register now as Student or Instructor",
+                "router_link_description": "Register Now!"
+            }
+        },
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "dob": "Date of Birth",
+        "email": "E-mail",
+        "select_role": "Select Role",
+        "student": "Student",
+        "instructor": "Instructor",
+        "username": "Username",
+        "password": "Password",
+        "signup_button": "Register",
+        "route_to_login_page": "Do you have an account? Login Now"
+    },
+    "login": {
+        "username": "Username",
+        "password": "Password",
+        "signin_button": "Login",
+        "route_to_register_page": "Do not have an account? Register Now"
+    },
+    "news": {
+        "search_bar": "Search for an article",
+        "open_dialog": "Open article",
+        "close": "Close",
+        "create": {
+            "title": "Add title",
+            "subtitle": "Add subtitle",
+            "content": "Add content",
+            "create_button": "Add article",
+            "update_button": "Update article"
+        }
+    },
+    "labs": {
+        "search_bar": "Search ...",
+        "category": "Category",
+        "open_dialog": "Show Details",
+        "close": "Close",
+        "reserve": {
+            "reserve_question": "Would you like to reserve lab",
+            "instructor": "Enter the name of lab instructor",
+            "reserve_button": "Reserve"
+        },
+        "create": {
+            "title": "Enter lab name",
+            "description": "Enter lab description",
+            "category": "Choose lab category",
+            "location": "Enter lab location",
+            "create_button": "Add lab"
+        },
+        "categories": {
+            "gesundheitswissenschaften": "Applied Health Sciences",
+            "informatik": "Applied Computer Science",
+            "elektrotechnik_medientechnik": "Electrical Engineering and Media Technology"
+        }
+    },
+    "students": {
+        "apply": {
+            "image_container": {
+                "header": "Apply to Start your Studies",
+                "body": "at Bavaria's most international University of Applied Sciences"
+            },
+            "intro": {
+                "title": "Applying to Study",
+                "body": "Step by Step to a Successful Application"
+            },
+            "content": {
+                "title": "Language Requirements",
+                "thd_button": "Language requirements to study at the Deggendorf Campus",
+                "thd_link": "https://www.th-deg.de/Studieninteressierte/Bewerbung/language_requirements_German-English_DEG.pdf",
+                "european_button": "Language requirements to study at the European Campus Rottal-Inn",
+                "european_link": "https://www.th-deg.de/Studieninteressierte/Bewerbung/language_requirements_German-English_ECRI.pdf"
+            },
+            "application": {
+                "title": "Application Period",
+                "period_button": "APPLICATION TIMELINE OVERVIEW",
+                "period_link": "https://www.th-deg.de/Studieninteressierte/Bewerbung/application-timeline-en.pdf",
+                "application_option_1": "Regular application period for full-time studies:",
+                "application_option_1_sub_1": "15 April - 15 July for entry in October",
+                "application_option_1_sub_2": "15 November - 15 January for entry in March",
+                "application_option_2": "Exceptions to the regular application period:",
+                "application_option_2_sub_1": "Master Applied Research in Engineering Sciences: apply 15 April - 31 May for October entry or 15 Nov - 15 Dec for March entry",
+                "application_option_2_sub_2": "Master Global Public Health: apply 15 April - 15 June for October entry",
+                "application_option_3": "General application deadlines for part-time studies:",
+                "application_option_3_sub_1": "October entries: Applications accepted until July 15",
+                "application_option_3_sub_2": "March entries: Applications accepted until January 15",
+                "requirement_title": "Required Documents",
+                "requirement_sub_title": "Apply directly to DIT online application platform (Primuss) and follow the steps indicated. Required documents for application:",
+                "requirement_1": "Secondary school leaving certificate",
+                "requirement_2": "Final bachelor certificate and transcripts of records",
+                "requirement_3": "CV and photo",
+                "requirement_4": "Language certificates",
+                "requirement_5": "Passport"
+            }
+        },
+        "international": {
+            "image_container": {
+                "header": "Apply to Start your Studies",
+                "body": "at Bavaria's most international University of Applied Sciences"
+            },
+            "intro": {
+                "title": "Why Study at DIT?",
+                "body": "Let our Pioneering and Vibrant University Inspire You"
+            },
+            "reasons_title": "More Reasons to Choose DIT as YOUR University",
+            "reasons": {
+                "first_reason_title": "WE TEACH IN ENGLISH",
+                "first_reason_content": "We're the only university of applied sciences with a campus teaching exclusively in English; the European Campus Rottal-Inn",
+                "second_reason_title": "LOCATION",
+                "second_reason_content": "Enjoy the European flair at our two teaching campuses set in charming urban locations",
+                "third_reason_title": "EVENTS",
+                "third_reason_content": "See what's happening on campus: From our own TV show to International Week and the Campus Open Air Festival",
+                "fourth_reason_title": "RENT",
+                "fourth_reason_content": "Feel at home in attractive, affordable & modern self-contained student apartments",
+                "fifth_reason_title": "INTERNATIONALITY",
+                "fifth_reason_content": "Our student population is currently over 8,000 including 34% international students from all over the globe",
+                "sixth_reason_title": "SUPPORT",
+                "sixth_reason_content": "Whether you are looking for accommodation, a job, or organizing a study semester abroad: we're always here to help you",
+                "seventh_reason_title": "RANKINGS",
+                "seventh_reason_content": "We have been recognized with international awards: in numerous rankings, we are at the top",
+                "eighth_reason_title": "SPORT",
+                "eighth_reason_content": "Enjoy competitive or recreational sports in a wide range of sport clubs from rowing or yoga to volleyball or football",
+                "ninth_reason_title": "KICK OFF YOUR CAREER",
+                "ninth_reason_content": "87% of all DIT graduates find a job within 2 months, and we provide support for student start-ups. Get a head start on your career!"
+            }
+        }
+    },
+    "chat": {
+        "message": "Message",
+        "send_message": "Send",
+        "users": "Users"
+    },
+    "validators": {
+        "mandatory_field": "The field is mandatory.",
+        "min_length": "The length should be a minimum of 6 characters.",
+        "max_length_20": "The length should be a maximum of 20 characters.",
+        "max_length_40": "The length should be a maximum of 40 characters."
+    }
+}

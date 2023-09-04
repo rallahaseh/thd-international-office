@@ -1,0 +1,41 @@
+<!-- Header Section -->
+<div class="header">
+    <div class="image-container">
+        <img src="/assets/background/university-campus.jpeg" alt="THD Campus" style="width:100%;">
+        <div class="image-content">
+            <h1 fxShow fxShow.gt-sm>{{ 'home.image_container.body_sm' | translate }}</h1>
+            <h1 fxHide fxShow.gt-sm>{{ 'home.image_container.body_lg' | translate }}</h1>
+            <a fxHide fxShow.gt-sm mat-raised-button href="{{ 'home.image_container.link' | translate }}" target="_blank">{{
+                'home.image_container.button_title' | translate }}</a>
+        </div>
+    </div>
+    <div class="intro-content">
+        <h1>{{ 'home.info.header' | translate }}.</h1>
+        <h2>{{ 'home.info.body' | translate }}</h2>
+    </div>
+</div>
+<!-- Body Section -->
+<div class="cards">
+    <mat-toolbar color="primary">
+        <span>{{ 'home.cards.title' | translate}}</span>
+    </mat-toolbar>
+    <div class="content">
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+            <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let card of cardData">
+                <mat-card class="mat-elevation-z4">
+                    <mat-card-header>
+                        <mat-card-title>{{ card.title | translate}}</mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image [src]="card.imageURL" />
+                    <mat-card-content>
+                        <p>{{ card.description | translate}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <a mat-raised-button color="primary" style='margin-right:16px'
+                            routerLink="{{ card.routerLink }}">{{ card.routerLinkDescription | translate}}</a>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

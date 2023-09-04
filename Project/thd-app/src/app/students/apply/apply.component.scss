@@ -1,0 +1,35 @@
+$primary-color: #1a4273;
+
+.image-container {
+	position: relative;
+	text-align: left;
+    .image-content {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        color: white;
+    }
+}
+
+@media all and (max-width: 1034px){
+    h1 {
+        font-size: 24px !important;
+    }
+    h2 {
+        font-size: 18px !important;
+    }
+}
+
+.content {
+    max-width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    color: $primary-color;
+}
+
+.period-button {
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}

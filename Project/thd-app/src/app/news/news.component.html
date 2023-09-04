@@ -1,0 +1,47 @@
+<mat-toolbar>
+  <mat-form-field>
+    <!-- Search field -->
+    <input class="search-input" matInput placeholder="{{ 'news.search_bar' | translate }}" [(ngModel)]="searchText"
+      (input)="searchArticle()" />
+    <!-- Search button -->
+    <button matSuffix mat-button>
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+  <!-- Create article button -->
+  <button mat-raised-button color="primary" *ngIf="authService.isAdmin()" (click)="createArticle()">{{
+    'news.create.create_button' | translate
+    }}</button>
+</mat-toolbar>
+<br>
+<br>
+<div class="card-wrapper">
+  <mat-card *ngFor="let article of filteredArticles">
+    <mat-card-header>
+      <img mat-card-avatar src="/assets/logo/small.png" alt="card image" />
+      <!-- Article title -->
+      <mat-card-title>{{ article.title }}</mat-card-title>
+      <!-- Article sub-title -->
+      <mat-card-subtitle>{{ article.sub_title }}</mat-card-subtitle>
+      <!-- Article publish date -->
+      <mat-card-subtitle>{{ article.publish_date | date:'EEEE, MMM d, yyyy h:mm a'}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- Article content -->
+      <p>{{ article.content }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- Open article button -->
+      <button mat-raised-button color="primary" (click)="readArticle(article)">{{ 'news.open_dialog' | translate
+        }}</button>
+      <!-- Edit article button -->
+      <button mat-raised-button color="accent" *ngIf="authService.isAdmin()" (click)="editArticle(article)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <!-- Delete article button -->
+      <button mat-raised-button color="warn" *ngIf="authService.isAdmin()" (click)="deleteArticle(article)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

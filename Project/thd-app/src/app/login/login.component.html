@@ -1,0 +1,39 @@
+<div class="main-div">
+    <mat-card>
+        <form [formGroup]="loginForm">
+            <!--Username-->
+            <mat-form-field appearance="fill">
+                <mat-label>{{ 'login.username' | translate }}</mat-label>
+                <input matInput formControlName="username" required>
+                <mat-error *ngIf="loginForm.controls['username'].errors?.minlength">{{ 'validators.min_length' |
+                    translate
+                    }}</mat-error>
+                <mat-error *ngIf="loginForm.controls['username'].errors?.maxlength">{{ 'validators.length_20' |
+                    translate }}
+                </mat-error>
+            </mat-form-field>
+            <!--Password-->
+            <mat-form-field appearance="fill">
+                <mat-label>{{ 'login.password' | translate }}</mat-label>
+                <input matInput [type]="isPasswordFieldHidden ? 'password' : 'text'" formControlName="password"
+                    required>
+                <button mat-icon-button matSuffix (click)="isPasswordFieldHidden = !isPasswordFieldHidden"
+                    [attr.aria-pressed]="isPasswordFieldHidden">
+                    <mat-icon>{{ isPasswordFieldHidden ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+                <mat-error *ngIf="loginForm.controls['password'].errors?.minlength">{{ 'validators.min_length' |
+                    translate
+                    }}</mat-error>
+                <mat-error *ngIf="loginForm.controls['password'].errors?.maxlength">{{ 'validators.length_40' |
+                    translate }}
+                </mat-error>
+            </mat-form-field>
+            <!--Login Button-->
+            <button mat-raised-button color="primary" (click)="login()" [disabled]="loginForm.invalid">
+                {{ 'login.signin_button' | translate }}
+            </button>
+            <!--Route to Register-->
+            <br><a href="/register">{{ 'login.route_to_register_page' | translate }}</a><br/>
+        </form>
+    </mat-card>
+</div>

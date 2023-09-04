@@ -1,0 +1,39 @@
+$primary-color: #1a4273;
+$card-color-1: #081d43;
+$card-color-2: #5f7b9d;
+$card-color-3: #0072d0;
+
+.image-container {
+	position: relative;
+	text-align: center;
+	opacity: 0.75;
+    .image-content {
+        position: absolute;
+        top: 70%;
+        @media all and (max-width: 1034px) {
+            top: 50%;
+        }
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+}
+
+.intro-content {
+    max-width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    color: $primary-color;
+}
+
+mat-toolbar {
+	justify-content: space-between;
+}
+
+.content {
+	padding: 16px;
+}
+
+.content>mat-card {
+	margin-bottom: 16px;
+}

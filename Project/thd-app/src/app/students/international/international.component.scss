@@ -1,0 +1,44 @@
+$primary-color: #1a4273;
+
+.image-container {
+	position: relative;
+	text-align: left;
+    .image-content {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        color: white;
+    }
+}
+
+@media all and (max-width: 1034px){
+    h1 {
+        font-size: 24px !important;
+    }
+    h2 {
+        font-size: 18px !important;
+    }
+}
+
+.content {
+    max-width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    color: $primary-color;
+}
+
+.video-frame {
+    width: 1024px;
+    height: 832px;
+    @media all and (max-width: 1034px) {
+        width: 450px;
+        height: 250px;
+    }
+}
+
+mat-grid-tile {
+    color: white;
+    @media all and (max-width: 1034px) {
+        
+    }
+}

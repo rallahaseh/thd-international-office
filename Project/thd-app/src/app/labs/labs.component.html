@@ -1,0 +1,69 @@
+<!-- Header -->
+<br>
+<div class="card-wrapper">
+    <div class="nav">
+        <mat-toolbar color="primary">
+            <!-- Search input -->
+            <input class="search-input" matInput placeholder="{{ 'labs.search_bar' | translate }}"
+                [(ngModel)]="searchText" (input)="searchForLab()" />
+            <!-- Search button -->
+            <button matSuffix mat-button>
+                <mat-icon>search</mat-icon>
+            </button>
+            <!-- Filter content using categories -->
+            <mat-form-field appearance="fill">
+                <mat-label>{{ 'labs.category' | translate }}</mat-label>
+                <mat-select [(value)]="selectedCategory" (selectionChange)="filterLabs($event.value)"
+                    [disabled]="searchText!=''">
+                    <mat-option></mat-option>
+                    <mat-option *ngFor="let category of categories" [value]="category">
+                        {{ category | translate }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-toolbar>
+    </div>
+    <!-- Create button -->
+    <div class="create">
+        <br>
+        <button mat-raised-button color="primary" *ngIf="authService.isAdmin()" (click)="createLab()">{{
+            'labs.create.create_button' | translate }}</button>
+    </div>
+    <!-- Body section -->
+    <div class="content">
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+            <div [fxFlex]="(100/3) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let lab of filteredLabs">
+                <mat-card class="mat-elevation-z4">
+                    <mat-card-header>
+                        <!-- Lab name -->
+                        <mat-card-title>{{ lab.name }}</mat-card-title>
+                        <!-- Lab Category -->
+                        <mat-card-subtitle>
+                            <mat-icon class="mr">library_books</mat-icon> {{ 'labs.categories.'+lab.category | translate }}
+                        </mat-card-subtitle>
+                        <!-- Lab instructor -->
+                        <mat-card-subtitle *ngIf="lab.instructor">
+                            <mat-icon class="mr">person_pin</mat-icon> {{ lab.instructor }}
+                        </mat-card-subtitle>
+                        <!-- Lab location -->
+                        <mat-card-subtitle>
+                            <mat-icon class="mr">location_on</mat-icon> {{ lab.location }}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <!-- Lab description -->
+                    <mat-card-content>
+                        <p>{{ lab.description }}</p>
+                    </mat-card-content>
+                    <!-- Reserve lab button -->
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" *ngIf="authService.isInstructor();" (click)="reserveDialog(lab)"
+                            [disabled]="lab.reserved">{{ 'labs.reserve.reserve_button' | translate }}</button>
+                        <button mat-raised-button color="primary" (click)="contentDialog(lab)">{{ 'labs.open_dialog' |
+                            translate }}</button>
+                        <button mat-raised-button color="warn" *ngIf="authService.isAdmin();" (click)="deleteLab(lab)"><mat-icon>delete</mat-icon></button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
